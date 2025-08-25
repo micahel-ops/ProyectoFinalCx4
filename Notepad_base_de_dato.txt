@@ -16,3 +16,4 @@ Definición de clases primarias
 Establecer la clase foránea
 	Relacionar dos tablas "ejemplo (id_cliente en la tabla Venta)"
 
+
