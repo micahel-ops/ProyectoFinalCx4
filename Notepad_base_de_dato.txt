@@ -1,0 +1,18 @@
+Semana 1.-
+¿Qué son los bases de datos? 
+un gestor de información de datos que se almacenan y se puedan acceder 
+las siglas de SQL(Structured Query Language)
+en español seria:Lenguaje de consulta estructurado
+Tipos de SQL:
+	SQL SERVER.- pertenece a Microsoft 
+	Oracol.- se dedica exclusivamente en base de datos 
+
+11/agosto/2025.- En los avances que realice es la creación repositorio en GitHub, SQL server management studio
+
+	
+Semana 2
+Definición de clases primarias
+	Valor único que identifica cada fila "ejemplo (id_cliente)"
+Establecer la clase foránea
+	Relacionar dos tablas "ejemplo (id_cliente en la tabla Venta)"
+
