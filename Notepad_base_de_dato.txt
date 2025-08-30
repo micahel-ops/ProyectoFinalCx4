@@ -44,4 +44,15 @@ where ciudad = 'Arequipa'
 select con Alias AS
 select NOMBRE AS, CIUDAD AS
 
+INSERT INTO Playerinformation
+(NombreJugador, PosicionCancha, Dorsal, Nacionalidad, FechaNacimiento)
+VALUES
+('Joan Garcia', 'Portero', 13, 'Español', '2001-05-04'),
+('Marc Ter Stegen', 'Portero', 1, 'Alemania', '1992-04-30'),
+('Wojciech Szczesny', 'Portero', 25, 'Polaco', '1990-04-18'),
+('Pau Cubarsí', 'Defensa Central', 5, 'Español', '2007-01-22'),
+('Ronald Araujo', 'Defensa Central', 4, 'Uruguayo', '1999-03-07');
+
+SELECT *FROM Playerinformation
+ORDER BY Dorsal ASC;
 
