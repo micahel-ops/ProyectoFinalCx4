@@ -56,3 +56,65 @@ VALUES
 SELECT *FROM Playerinformation
 ORDER BY Dorsal ASC;
 
+delete from Playerinformation
+where Dorsal = 3
+
+update Playerinformation set Dorsal = 18 where NombreJugador = 'Gerard Martín' 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
