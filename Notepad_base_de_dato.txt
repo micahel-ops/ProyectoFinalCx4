@@ -61,6 +61,33 @@ where Dorsal = 3
 
 update Playerinformation set Dorsal = 18 where NombreJugador = 'Gerard Martín' 
 
+ALTER TABLE Playerinformation
+ADD Id INT;
+
+SELECT 
+    ROW_NUMBER() OVER (ORDER BY NombreJugador) AS Id,
+    NombreJugador,
+    PosicionCancha,
+    Dorsal,
+    Nacionalidad,
+    FechaNacimiento
+FROM Playerinformation;
+
+sp_help Playerinformation;
+
+ALTER TABLE Playerinformation
+DROP COLUMN Id;
+
+agregar un campo pk
+ALTER TABLE Playerinformation
+ADD Id INT IDENTITY(1,1) PRIMARY KEY;
+
+eliminar los datos ingresados
+DELETE FROM PlayerContrato
+
+
+para reiniciar en contador:
+TRUNCATE TABLE PlayerContrato;
 
 
 
