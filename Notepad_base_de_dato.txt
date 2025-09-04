@@ -91,6 +91,58 @@ TRUNCATE TABLE PlayerContrato;
 
 
 
+para unir 2 tablas
+
+SELECT * FROM Playerinformation
+inner join PlayerContrato on 
+Playerinformation.Id = PlayerContrato.Id
+
+SELECT NombreJugador
+FROM Playerinformation
+WHERE NombreJugador LIKE 'R%';
+
+
+
+SELECT NombreJugador, Nacionalidad
+FROM Playerinformation
+WHERE Nacionalidad IN ('España', 'Polaco');
+
+
+
+SELECT *
+FROM PlayerContrato
+WHERE Salario BETWEEN 4000000 AND 12000000;
+
+SELECT Nacionalidad, COUNT(*) AS TotalJugadores
+FROM Playerinformation
+GROUP BY Nacionalidad
+HAVING COUNT(*) > 1;
+
+
+
+
+SELECT p.NombreJugador, c.Salario,
+       CASE 
+            WHEN c.Salario < 5000000 THEN 'Bajo'
+            WHEN c.Salario BETWEEN 5000000 AND 15000000 THEN 'Medio'
+            ELSE 'Alto'
+       END AS CategoriaSueldo
+FROM Playerinformation p
+INNER JOIN PlayerContrato c ON p.Id = c.Id;
+
+
+
+
+SELECT p.NombreJugador
+FROM Playerinformation p
+LEFT JOIN PlayerContrato c ON p.Id = c.Id
+WHERE c.Id IS NULL;
+
+
+
+
+
+
 
 
 
