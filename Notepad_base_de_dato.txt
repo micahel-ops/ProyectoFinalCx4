@@ -138,6 +138,38 @@ FROM Playerinformation p
 LEFT JOIN PlayerContrato c ON p.Id = c.Id
 WHERE c.Id IS NULL;
 
+1. Operadores lógicos 
+
+AND  Verdadero si todas las condiciones lo son.
+
+OR  Verdadero si al menos una condición lo es.
+
+NOT  Niega la condición.
+2. Operadores de comparación
+=  Igual.
+
+!= o <>  Diferente.
+
+>  Mayor.
+
+<  Menor.
+
+>=  Mayor o igual.
+
+<= Menor o igual.
+3. Condicionales adicionales
+BETWEEN_AND: Verifica si un valor está dentro de un rango.
+IN:  Verifica si un valor coincide con alguno en una lista.
+LIKE: Verifica si un valor coincide con un patrón.
+IS NULL / IS NOT NULL Verifica valores nulos.
+4. Operadores avanzados (según motor de base de datos)
+ALL: La condición debe cumplirse para todos los valores de un conjunto.
+ANY / SOME → La condición debe cumplirse para al menos un valor de un conjunto.
+EXISTS: Comprueba si una subconsulta devuelve filas.
+5. Orden de precedencia
+1. NOT
+2. AND
+3. OR
 
 
 
