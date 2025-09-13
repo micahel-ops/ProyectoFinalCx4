@@ -14,26 +14,26 @@ Bienvenido a mi álbum personal. Aquí voy guardando una foto por día.
 ![Imagen3](Imagen3.png)
 
 ## IMAGEN NUMERO 4
-![Imagen3](Imagen3.png)
+![Imagen4](Imagen3.png)
 
 ## IMAGEN NUMERO 5
-![Imagen3](Imagen3.png)
+![Imagen5](Imagen3.png)
 
 ## IMAGEN NUMERO 6
-![Imagen3](Imagen3.png)
+![Imagen6](Imagen3.png)
 
 ## IMAGEN NUMERO 7
-![Imagen3](Imagen3.png)
+![Imagen7](Imagen3.png)
 
 ## IMAGEN NUMERO 8
-![Imagen3](Imagen3.png)
+![Imagen8](Imagen3.png)
 
 ## IMAGEN NUMERO 9
-![Imagen3](Imagen3.png)
+![Imagen9](Imagen3.png)
 
 ## IMAGEN NUMERO 10
-![Imagen3](Imagen3.png)
+![Imagen10](Imagen3.png)
 
 ## IMAGEN NUMERO 11
-![Imagen3](Imagen3.png)
+![Imagen11](Imagen3.png)
 
