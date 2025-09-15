@@ -41,4 +41,5 @@ Bienvenido a mi álbum personal. Aquí voy guardando una foto por día.
 
 ## IMAGEN NUMERO 12
 ![Imagen12](Imagen12.png)    
+
 ----------------------------------------------------------------------------
