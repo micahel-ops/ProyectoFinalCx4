@@ -138,6 +138,8 @@ FROM Playerinformation p
 LEFT JOIN PlayerContrato c ON p.Id = c.Id
 WHERE c.Id IS NULL;
 
+
+
 1. Operadores lógicos 
 
 AND  Verdadero si todas las condiciones lo son.
@@ -171,9 +173,62 @@ EXISTS: Comprueba si una subconsulta devuelve filas.
 2. AND
 3. OR
 
+IMPLEMENTACION DE SAKILA EN MYSQL WORKBENCH
+
+Ver todas las tablas disponibles ESO ESTA EN MYSQL 
+show Tables 
+
+hora de iniciar en mysql workbench utilizar 
+USE sakila;
 
 
+Primero se recuerda lo básico:
 
+Una subconsulta es simplemente una consulta dentro de otra.
+
+Se diferencia de la consulta principal porque suele devolver un valor intermedio que luego la consulta grande usa para filtrar o calcular algo.
+
+También se repasan las diferencias entre INNER JOIN y LEFT JOIN, y se explica qué hacen UNION y UNION ALL.
+
+Después viene lo útil:
+
+Las subconsultas permiten buscar cosas más específicas y complejas, mientras que los JOIN sirven para unir información de varias tablas en una misma vista.
+
+Usar LEFT JOIN tiene sentido cuando quieres mostrar todos los registros de la tabla izquierda, incluso si no hay coincidencias en la derecha.
+
+Y usar UNION ALL en vez de UNION es útil cuando no te importa que salgan duplicados y quieres que la consulta sea más rápida.
+
+Luego se profundiza en los tipos de subconsultas:
+
+Escalar: devuelve un solo valor (ejemplo: el promedio de salarios).
+
+De tabla: devuelve varias filas.
+
+Correlacionada: depende de la consulta principal y se ejecuta fila por fila.
+
+Se enseñan ejemplos prácticos:
+
+Comparar salarios contra el promedio usando una subconsulta.
+
+Usar EXISTS y NOT EXISTS para saber si un empleado pertenece a un departamento con proyectos o no.
+
+Usar IN para filtrar empleados que están en ciertos departamentos.
+
+Después entran los JOIN:
+
+INNER JOIN: solo trae lo que coincide en ambas tablas.
+
+LEFT JOIN: trae todos los de la izquierda y los que encajen de la derecha.
+
+RIGHT JOIN: al revés del anterior.
+
+FULL JOIN: une todo, incluso lo que no coincide, poniendo NULL donde falta.
+
+CROSS JOIN: genera todas las combinaciones posibles, como un producto cartesiano.
+
+También se ven ejemplos claros: empleados con sus departamentos, empleados con proyectos (aunque no tengan), proyectos con empleados asignados, y combinaciones totales.
+
+Por último, aparece UNION: que combina resultados de varias consultas, eliminando duplicados, salvo que uses UNION ALL, que los mantiene.
 
 
 
