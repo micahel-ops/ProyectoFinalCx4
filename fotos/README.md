@@ -30,6 +30,10 @@ Bienvenido a mi álbum personal. Aquí voy guardando una foto por día.
 
 ![Imagen12](Imagen12.png)
 
+...
+SEMANA 6
+...
+
 ![Imagen13](Imagen13.png)
 
 ![Imagen14](Imagen14.png)
