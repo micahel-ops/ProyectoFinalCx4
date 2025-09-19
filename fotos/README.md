@@ -1,10 +1,12 @@
 # 📸 Álbum de Fotos
 ----------------------------------------------------------------------------
 Bienvenido a mi álbum personal. Aquí voy guardando una foto por día.
+
 ## 📂 Contenido del Álbum
 - 📑 **Consultas SQL** → Scripts usados en el proyecto.  
 - 🖼️ **Evidencias visuales** → Capturas de resultados (screenshots).  
-- 🗂️ **Base de datos** → Archivos `.sql` y documentación relacionada.  
+- 🗂️ **Base de datos** → Archivos `.sql` y documentación relacionada.
+ 
 ----------------------------------------------------------------------------
 ![Imagen1](Imagen1.png)
 
