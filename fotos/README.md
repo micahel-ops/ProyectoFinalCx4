@@ -53,4 +53,10 @@ SEMANA 6
 
 ![Imagen15](Imagen15.png)
 
+![Imagen16](Imagen16.png)
+
+![Imagen17](Imagen17.png)
+
+![Imagen18](Imagen18.png)
+
 ----------------------------------------------------------------------------
