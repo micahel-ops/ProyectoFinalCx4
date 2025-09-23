@@ -67,6 +67,10 @@ SEMANA 6
 
 ![Imagen22](Imagen22.png)
 
+-- CROSS JOIN genera el producto cartesiano:
+-- combina cada empleado con cada departamento,
+-- sin importar si realmente trabaja allí.
+
 ![Imagen23](Imagen23.png)
 
 
