@@ -63,6 +63,11 @@ SEMANA 6
 
 ![Imagen20](Imagen20.png)
 
+-- Esta consulta devuelve la lista de empleados con su respectivo departamento.
+-- Se usa RIGHT JOIN para asegurar que aparezcan todos los empleados,
+-- incluso aquellos que no tengan un departamento asignado (en ese caso, el campo Departamento será NULL).
+-- La relación se hace a través de la tabla EmployeeDepartmentHistory.
+
 ![Imagen21](Imagen21.png)
 
 -- FULL JOIN devuelve todas las filas de ambas tablas:
