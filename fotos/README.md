@@ -65,6 +65,9 @@ SEMANA 6
 
 ![Imagen21](Imagen21.png)
 
+-- FULL JOIN devuelve todas las filas de ambas tablas:
+-- coincidencias, más los registros que no tienen pareja en la otra tabla.
+
 ![Imagen22](Imagen22.png)
 
 -- CROSS JOIN genera el producto cartesiano:
