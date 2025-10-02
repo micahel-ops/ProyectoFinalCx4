@@ -131,6 +131,6 @@ SEMANA 8
 -- Finalmente, se muestra un ejemplo de ejecución del procedimiento para buscar todas las personas con apellido 'Smith'.
 -- La última consulta (SELECT * FROM Person.Person) es para mostrar todos los registros de la tabla Person.Person.
 
-![Imagen28](Imagen28.png)
+![Imagen29](Imagen29.png)
 
 ----------------------------------------------------------------------------
