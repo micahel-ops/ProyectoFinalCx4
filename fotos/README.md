@@ -116,6 +116,11 @@ SEMANA 8
 ...
 ...   
 ![Imagen27](Imagen27.png)
+
+-- Este procedimiento usa una transacción para actualizar el estado de un pedido 
+-- en la tabla Sales.SalesOrderHeader de AdventureWorks2022. 
+-- Si todo sale bien hace COMMIT; si ocurre un error hace ROLLBACK y lanza la excepción.
+
 ![Imagen28](Imagen28.png)
 
 ----------------------------------------------------------------------------
