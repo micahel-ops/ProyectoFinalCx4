@@ -123,4 +123,14 @@ SEMANA 8
 
 ![Imagen28](Imagen28.png)
 
+-- Este procedimiento almacenado llamado dbo.BuscarPersonasPorApellido
+-- recibe un parámetro de entrada llamado @Apellido (de tipo NVARCHAR(50)).
+-- Al ejecutarlo, realiza una consulta a la tabla Person.Person de la base de datos AdventureWorks2022,
+-- buscando todas las personas cuyo apellido coincida exactamente con el valor pasado en @Apellido.
+-- La consulta devuelve el BusinessEntityID, FirstName y LastName de las personas que cumplen con ese criterio.
+-- Finalmente, se muestra un ejemplo de ejecución del procedimiento para buscar todas las personas con apellido 'Smith'.
+-- La última consulta (SELECT * FROM Person.Person) es para mostrar todos los registros de la tabla Person.Person.
+
+![Imagen28](Imagen28.png)
+
 ----------------------------------------------------------------------------
