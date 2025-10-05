@@ -213,6 +213,16 @@ Contexto del PIVOT en SQL
 El PIVOT se usa cuando quieres reorganizar datos para analizarlos mejor.
 Normalmente una tabla en la BD guarda la información en formato largo (filas), porque así es más eficiente almacenar y consultar.
 
+Procedimiento almacenado (Stored Procedure)
+
+Es un conjunto de instrucciones SQL almacenadas en el servidor que se ejecutan como una unidad.
+Permite realizar operaciones complejas, modificar datos y reutilizar código dentro de la base de datos.
+
+Función (Function)
+
+Es un bloque de código SQL que recibe parámetros y devuelve un valor o una tabla.
+Se utiliza para realizar cálculos, transformaciones o consultas, sin modificar los datos de la base.
+
 
 
 
