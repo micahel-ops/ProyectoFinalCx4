@@ -167,9 +167,11 @@ SEMANA 8
 ![Imagen30](Imagen30.png)
 
 31...
+-- Esta función une el nombre y apellido para devolver el nombre completo de una persona.
 ![Imagen31](Imagen31.png)
 
 32...
+-- Esta función devuelve una tabla con los empleados que pertenecen al departamento indicado.
 ![Imagen32](Imagen32.png)
 
 
