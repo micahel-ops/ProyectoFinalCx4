@@ -175,4 +175,7 @@ SEMANA 8
 ![Imagen32](Imagen32.png)
 
 
+--Esta consulta obtiene todas las órdenes de venta realizadas por un cliente específico (en este caso, con CustomerID igual a 11000). Para ello, une la tabla de clientes (Sales.Customer) con la tabla de órdenes de venta (Sales.SalesOrderHeader) utilizando la columna CustomerID. El resultado muestra el ID del cliente, el nombre de la empresa, y detalles de cada orden como el ID, la fecha y el total a pagar.
+![Imagen33](Imagen33.png)
+
 ----------------------------------------------------------------------------
