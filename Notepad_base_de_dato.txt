@@ -224,31 +224,7 @@ Es un bloque de código SQL que recibe parámetros y devuelve un valor o una tab
 Se utiliza para realizar cálculos, transformaciones o consultas, sin modificar los datos de la base.
 
 
-Existen cuatro tipos principales de JOIN:
 
-CROSS JOIN:
-Genera el producto cartesiano de dos tablas, es decir, combina cada fila de la primera tabla con todas las filas de la segunda. No usa condiciones y puede devolver muchos resultados.
-
-INNER JOIN:
-Devuelve solo las filas que tienen coincidencias en ambas tablas. Es ideal cuando solo se necesitan los datos que existen en ambas.
-
-LEFT JOIN:
-Muestra todas las filas de la tabla izquierda y las coincidencias de la derecha. Si no hay coincidencias, los valores de la tabla derecha aparecen como nulos. Es útil para ver todos los registros principales, aunque no tengan relación.
-
-RIGHT JOIN:
-Funciona de manera opuesta al LEFT JOIN. Muestra todas las filas de la tabla derecha y las coincidencias de la izquierda. Se usa cuando la tabla secundaria es la más importante para el análisis.
-
-En resumen, el tipo de JOIN que se elija influye directamente en la cantidad de datos que se muestran:
-
-El INNER JOIN filtra solo los que coinciden.
-
-El LEFT JOIN conserva todos los registros de la tabla principal.
-
-El RIGHT JOIN conserva todos los registros de la tabla secundaria.
-
-El CROSS JOIN combina todo con todo.
-
-Comprender esto permite analizar relaciones uno a muchos de forma precisa, obteniendo resultados coherentes según la necesidad del análisis.
 
 
 
