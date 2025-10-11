@@ -1,3 +1,5 @@
+BASE DE DATOS
+
 ¿Qué son los bases de datos? 
 un gestor de información de datos que se almacenan y se puedan acceder 
 las siglas de SQL(Structured Query Language)
@@ -250,6 +252,7 @@ El RIGHT JOIN conserva todos los registros de la tabla secundaria.
 El CROSS JOIN combina todo con todo.
 
 Comprender esto permite analizar relaciones uno a muchos de forma precisa, obteniendo resultados coherentes según la necesidad del análisis.
+
 
 
 
