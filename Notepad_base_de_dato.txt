@@ -1,119 +1,129 @@
 BASE DE DATOS
+¿Qué es una Base de Datos?
 
-¿Qué son los bases de datos? 
-un gestor de información de datos que se almacenan y se puedan acceder 
-las siglas de SQL(Structured Query Language)
-en español seria:Lenguaje de consulta estructurado
-Tipos de SQL:
-	SQL SERVER.- pertenece a Microsoft 
-	Oracol.- se dedica exclusivamente en base de datos 
+Una base de datos es un sistema que permite almacenar, organizar y acceder a información de manera estructurada.
+El lenguaje utilizado para interactuar con ellas es SQL (Structured Query Language), que en español significa Lenguaje de Consulta Estructurado.
 
-En los avances que realice es la creación repositorio en GitHub, SQL server management studio
+Tipos de SQL y Motores de Base de Datos
 
-	
-Definición de clases primarias
-	Valor único que identifica cada fila "ejemplo (id_cliente)"
-Establecer la clase foránea
-	Relacionar dos tablas "ejemplo (id_cliente en la tabla Venta)"
+SQL Server: Pertenece a Microsoft y se usa ampliamente en entornos empresariales.
 
-En esta semana implementé:
-	Claves primarias en todas las tablas.
-	Claves foráneas para asegurar la integridad referencial.
-	Relaciones entre clientes, empleados, ventas, proveedores y productos.
+Oracle: Especializado en gestión avanzada de bases de datos.
 
-Archivos:
-	script_semana2.sql → Tablas con PK y FK.
-	modelo_ER.png → Diagrama E–R con relacione
+MySQL: Popular en desarrollo web y entornos educativos.
 
-creando varias tablas
+Avances personales realizados
 
+Creación de un repositorio en GitHub.
 
-DML(Data Manipulation Lenguage)
-Select: Consulta de la data
-Insert: Ingresar datos 
-Updata: Modificar dato
-Delete: Eliminar dato
-Create, alter, drop: permisos
+Uso de SQL Server Management Studio.
 
-Seleccionar datos tenemos:
+Implementación de claves primarias (PK) y foráneas (FK).
 
-select*from nombredelatabla;
+Creación de relaciones entre clientes, empleados, ventas, proveedores y productos.
 
-con where:
-select*from cliente
-where ciudad = 'Arequipa'
+Archivos creados:
 
-select con Alias AS
-select NOMBRE AS, CIUDAD AS
+script_semana2.sql: contiene las tablas con PK y FK.
+
+modelo_ER.png: diagrama entidad–relación con relaciones implementadas.
+
+Conceptos Clave
+Clave Primaria (Primary Key)
+
+Valor único que identifica cada fila en una tabla.
+Ejemplo: id_cliente
+
+Clave Foránea (Foreign Key)
+
+Campo que relaciona una tabla con otra.
+Ejemplo: id_cliente en la tabla Venta.
+
+Lenguaje DML (Data Manipulation Language)
+Comando	Función
+SELECT	Consultar datos
+INSERT	Insertar datos
+UPDATE	Modificar datos
+DELETE	Eliminar datos
+CREATE / ALTER / DROP	Crear, modificar o eliminar estructuras
+Ejemplos:
+SELECT * FROM Cliente WHERE ciudad = 'Arequipa';
 
 INSERT INTO Playerinformation
 (NombreJugador, PosicionCancha, Dorsal, Nacionalidad, FechaNacimiento)
 VALUES
-('Joan Garcia', 'Portero', 13, 'Español', '2001-05-04'),
-('Marc Ter Stegen', 'Portero', 1, 'Alemania', '1992-04-30'),
-('Wojciech Szczesny', 'Portero', 25, 'Polaco', '1990-04-18'),
-('Pau Cubarsí', 'Defensa Central', 5, 'Español', '2007-01-22'),
-('Ronald Araujo', 'Defensa Central', 4, 'Uruguayo', '1999-03-07');
+('Joan Garcia', 'Portero', 13, 'Español', '2001-05-04');
 
-SELECT *FROM Playerinformation
-ORDER BY Dorsal ASC;
 
-delete from Playerinformation
-where Dorsal = 3
+Ordenar resultados:
 
-update Playerinformation set Dorsal = 18 where NombreJugador = 'Gerard Martín' 
+SELECT * FROM Playerinformation ORDER BY Dorsal ASC;
 
-ALTER TABLE Playerinformation
-ADD Id INT;
 
-SELECT 
-    ROW_NUMBER() OVER (ORDER BY NombreJugador) AS Id,
-    NombreJugador,
-    PosicionCancha,
-    Dorsal,
-    Nacionalidad,
-    FechaNacimiento
-FROM Playerinformation;
+Eliminar registros:
 
-sp_help Playerinformation;
+DELETE FROM Playerinformation WHERE Dorsal = 3;
 
-ALTER TABLE Playerinformation
-DROP COLUMN Id;
 
-agregar un campo pk
+Actualizar registros:
+
+UPDATE Playerinformation SET Dorsal = 18 WHERE NombreJugador = 'Gerard Martín';
+
+
+Agregar columna con clave primaria autoincremental:
+
 ALTER TABLE Playerinformation
 ADD Id INT IDENTITY(1,1) PRIMARY KEY;
 
-eliminar los datos ingresados
-DELETE FROM PlayerContrato
+Unión de Tablas (JOINs)
+Tipo de JOIN	Descripción
+INNER JOIN	Muestra solo coincidencias entre ambas tablas.
+LEFT JOIN	Muestra todos los registros de la tabla izquierda y las coincidencias de la derecha.
+RIGHT JOIN	Muestra todos los registros de la tabla derecha.
+FULL JOIN	Une todos los registros, incluso los que no coinciden.
+CROSS JOIN	Genera todas las combinaciones posibles (producto cartesiano).
 
+Ejemplo:
 
-para reiniciar en contador:
-TRUNCATE TABLE PlayerContrato;
-
-
-
-para unir 2 tablas
-
-SELECT * FROM Playerinformation
-inner join PlayerContrato on 
-Playerinformation.Id = PlayerContrato.Id
-
-SELECT NombreJugador
+SELECT * 
 FROM Playerinformation
-WHERE NombreJugador LIKE 'R%';
+INNER JOIN PlayerContrato 
+ON Playerinformation.Id = PlayerContrato.Id;
 
+Operadores en SQL
+Lógicos
 
+AND: Verdadero si todas las condiciones lo son.
 
-SELECT NombreJugador, Nacionalidad
-FROM Playerinformation
-WHERE Nacionalidad IN ('España', 'Polaco');
+OR: Verdadero si al menos una condición lo es.
 
+NOT: Niega la condición.
 
+Comparación
 
-SELECT *
-FROM PlayerContrato
-WHERE Salario BETWEEN 4000000 AND 12000000;
+=, !=, <>, >, <, >=, <=
+
+Condicionales adicionales
+
+BETWEEN ... AND ...
+
+IN (...)
+
+LIKE
+
+IS NULL / IS NOT NULL
+
+Orden de precedencia
+
+NOT
+
+AND
+
+OR
+
+Consultas avanzadas
+
+Agrupación:
 
 SELECT Nacionalidad, COUNT(*) AS TotalJugadores
 FROM Playerinformation
@@ -121,7 +131,7 @@ GROUP BY Nacionalidad
 HAVING COUNT(*) > 1;
 
 
-
+Clasificación por rango:
 
 SELECT p.NombreJugador, c.Salario,
        CASE 
@@ -132,175 +142,42 @@ SELECT p.NombreJugador, c.Salario,
 FROM Playerinformation p
 INNER JOIN PlayerContrato c ON p.Id = c.Id;
 
+Subconsultas y UNION
 
+Subconsulta escalar: devuelve un solo valor (ej. promedio de salarios).
 
+Subconsulta de tabla: devuelve varias filas.
 
-SELECT p.NombreJugador
-FROM Playerinformation p
-LEFT JOIN PlayerContrato c ON p.Id = c.Id
-WHERE c.Id IS NULL;
+Correlacionada: depende de la consulta principal.
 
+Operadores útiles:
 
+IN, EXISTS, NOT EXISTS, ANY, ALL
 
-1. Operadores lógicos 
+UNION y UNION ALL:
 
-AND  Verdadero si todas las condiciones lo son.
+UNION: une resultados y elimina duplicados.
 
-OR  Verdadero si al menos una condición lo es.
+UNION ALL: mantiene duplicados y es más rápido.
 
-NOT  Niega la condición.
-2. Operadores de comparación
-=  Igual.
+PIVOT
 
-!= o <>  Diferente.
+El comando PIVOT se utiliza para reorganizar datos y presentarlos de manera más analítica (por columnas en lugar de filas).
 
->  Mayor.
-
-<  Menor.
-
->=  Mayor o igual.
-
-<= Menor o igual.
-3. Condicionales adicionales
-BETWEEN_AND: Verifica si un valor está dentro de un rango.
-IN:  Verifica si un valor coincide con alguno en una lista.
-LIKE: Verifica si un valor coincide con un patrón.
-IS NULL / IS NOT NULL Verifica valores nulos.
-4. Operadores avanzados (según motor de base de datos)
-ALL: La condición debe cumplirse para todos los valores de un conjunto.
-ANY / SOME → La condición debe cumplirse para al menos un valor de un conjunto.
-EXISTS: Comprueba si una subconsulta devuelve filas.
-5. Orden de precedencia
-1. NOT
-2. AND
-3. OR
-
-IMPLEMENTACION DE SAKILA EN MYSQL WORKBENCH
-
-Ver todas las tablas disponibles ESO ESTA EN MYSQL 
-show Tables 
-
-hora de iniciar en mysql workbench utilizar 
-USE sakila;
-
-
-Primero se recuerda lo básico: Una subconsulta es simplemente una consulta dentro de otra.
-Se diferencia de la consulta principal porque suele devolver un valor intermedio que luego la consulta grande usa para filtrar o calcular algo.
-También se repasan las diferencias entre INNER JOIN y LEFT JOIN, y se explica qué hacen UNION y UNION ALL.
-Después viene lo útil:
-Las subconsultas permiten buscar cosas más específicas y complejas, mientras que los JOIN sirven para unir información de varias tablas en una misma vista.
-Usar LEFT JOIN tiene sentido cuando quieres mostrar todos los registros de la tabla izquierda, incluso si no hay coincidencias en la derecha.
-Y usar UNION ALL en vez de UNION es útil cuando no te importa que salgan duplicados y quieres que la consulta sea más rápida.
-Luego se profundiza en los tipos de subconsultas:
-Escalar: devuelve un solo valor (ejemplo: el promedio de salarios).
-De tabla: devuelve varias filas.
-Correlacionada: depende de la consulta principal y se ejecuta fila por fila.
-Se enseñan ejemplos prácticos:
-Comparar salarios contra el promedio usando una subconsulta.
-Usar EXISTS y NOT EXISTS para saber si un empleado pertenece a un departamento con proyectos o no.
-Usar IN para filtrar empleados que están en ciertos departamentos.
-Después entran los JOIN:
-INNER JOIN: solo trae lo que coincide en ambas tablas.
-LEFT JOIN: trae todos los de la izquierda y los que encajen de la derecha.
-RIGHT JOIN: al revés del anterior.
-FULL JOIN: une todo, incluso lo que no coincide, poniendo NULL donde falta.
-CROSS JOIN: genera todas las combinaciones posibles, como un producto cartesiano.
-También se ven ejemplos claros: empleados con sus departamentos, empleados con proyectos (aunque no tengan), proyectos con empleados asignados, y combinaciones totales.
-Por último, aparece UNION: que combina resultados de varias consultas, eliminando duplicados, salvo que uses UNION ALL, que los mantiene.
-
-
-
-Contexto del PIVOT en SQL
-
-El PIVOT se usa cuando quieres reorganizar datos para analizarlos mejor.
-Normalmente una tabla en la BD guarda la información en formato largo (filas), porque así es más eficiente almacenar y consultar.
-
+Procedimientos y Funciones
 Procedimiento almacenado (Stored Procedure)
 
-Es un conjunto de instrucciones SQL almacenadas en el servidor que se ejecutan como una unidad.
-Permite realizar operaciones complejas, modificar datos y reutilizar código dentro de la base de datos.
+Bloque de instrucciones SQL que se ejecuta como una unidad.
+Sirve para automatizar operaciones complejas o repetitivas.
 
 Función (Function)
 
-Es un bloque de código SQL que recibe parámetros y devuelve un valor o una tabla.
-Se utiliza para realizar cálculos, transformaciones o consultas, sin modificar los datos de la base.
+Código SQL que recibe parámetros y devuelve un valor o tabla.
+No modifica datos, se usa para cálculos o transformaciones.
 
+Implementación de SAKILA en MySQL Workbench
 
+Comandos básicos:
 
-Existen cuatro tipos principales de JOIN:
-
-CROSS JOIN:
-Genera el producto cartesiano de dos tablas, es decir, combina cada fila de la primera tabla con todas las filas de la segunda. No usa condiciones y puede devolver muchos resultados.
-
-INNER JOIN:
-Devuelve solo las filas que tienen coincidencias en ambas tablas. Es ideal cuando solo se necesitan los datos que existen en ambas.
-
-LEFT JOIN:
-Muestra todas las filas de la tabla izquierda y las coincidencias de la derecha. Si no hay coincidencias, los valores de la tabla derecha aparecen como nulos. Es útil para ver todos los registros principales, aunque no tengan relación.
-
-RIGHT JOIN:
-Funciona de manera opuesta al LEFT JOIN. Muestra todas las filas de la tabla derecha y las coincidencias de la izquierda. Se usa cuando la tabla secundaria es la más importante para el análisis.
-
-En resumen, el tipo de JOIN que se elija influye directamente en la cantidad de datos que se muestran:
-
-El INNER JOIN filtra solo los que coinciden.
-
-El LEFT JOIN conserva todos los registros de la tabla principal.
-
-El RIGHT JOIN conserva todos los registros de la tabla secundaria.
-
-El CROSS JOIN combina todo con todo.
-
-Comprender esto permite analizar relaciones uno a muchos de forma precisa, obteniendo resultados coherentes según la necesidad del análisis.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+SHOW TABLES;
+USE sakila;
