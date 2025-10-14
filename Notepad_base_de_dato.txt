@@ -1,3 +1,4 @@
+
 BASE DE DATOS
 ¿Qué es una Base de Datos?
 
@@ -181,3 +182,4 @@ Comandos básicos:
 
 SHOW TABLES;
 USE sakila;
+
