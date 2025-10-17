@@ -7,7 +7,7 @@ Bienvenido a mi álbum personal. Aquí voy guardando una foto por día.
 - 🖼️ **Evidencias visuales** → Capturas de resultados (screenshots).  
 - 🗂️ **Base de datos** → Archivos `.sql` y documentación relacionada.
 - 
- 
+  
 ----------------------------------------------------------------------------
 1... 
 ![Imagen1](Imagen1.png)
