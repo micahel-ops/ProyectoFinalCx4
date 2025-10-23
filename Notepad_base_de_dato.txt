@@ -1,3 +1,4 @@
+
 BASE DE DATOS
 ¿Qué es una Base de Datos?
 
@@ -205,6 +206,7 @@ SELECT MAX(columna) AS Maximo FROM tabla;
 
 MIN(columna) → Devuelve el valor mínimo.
 SELECT MIN(columna) AS Minimo FROM tabla;
+
 
 
 
