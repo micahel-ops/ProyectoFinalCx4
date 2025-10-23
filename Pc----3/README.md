@@ -9,13 +9,8 @@ Aquí se incluirán capturas, diagramas, avances visuales y cualquier recurso gr
 
 A continuación, se muestran las imágenes subidas hasta el momento:
 
-![Imagen1](Imagen%1.png)
-![Imagen2](Imagen%2.png)
-![Imagen3](Imagen%3.png)
-![Imagen4](Imagen%4.png)
-![Imagen5](Imagen%5.png)
-![Imagen6](Imagen%6.png)
-![Imagen7](Imagen%7.png)
-
+![Imagen 1](imagen_1.png)
+![Imagen 2](imagen_2.png)
+![Imagen 3](imagen_3.png)
 
 ---
