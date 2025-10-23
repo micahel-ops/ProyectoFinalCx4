@@ -1,0 +1,39 @@
+# 🧠 Funciones Agregadas en SQL – AdventureWorks2022
+
+Este proyecto demuestra el uso de **funciones agregadas (SUM, COUNT, AVG, MAX, MIN)**  
+y las cláusulas **GROUP BY** y **HAVING** aplicadas sobre la base de datos **AdventureWorks2022**  
+en Microsoft SQL Server.
+
+---
+
+## 📋 Descripción del Proyecto
+
+El objetivo es analizar datos empresariales de ventas, productos y clientes mediante consultas SQL  
+para obtener resúmenes, promedios, totales y filtrados de información relevante.
+
+---
+
+## 🧩 Consultas Incluidas
+
+1. **SUM()** – Total de ventas por producto  
+2. **COUNT()** – Número de pedidos por cliente  
+3. **AVG()** – Promedio de venta por vendedor  
+4. **MAX()** – Pedido más alto por cliente  
+5. **MIN()** – Pedido más bajo por cliente  
+6. **GROUP BY + HAVING** – Clientes con más de 10,000 en ventas  
+7. **COUNT() + GROUP BY** – Productos más vendidos  
+
+Cada consulta está comentada y lista para ejecutarse en **SQL Server Management Studio (SSMS)**.
+
+---
+
+## 🧾 Ejemplo de Consulta
+
+```sql
+SELECT 
+    p.Name AS Producto,
+    SUM(sod.LineTotal) AS TotalVentas
+FROM Sales.SalesOrderDetail sod
+JOIN Production.Product p ON sod.ProductID = p.ProductID
+GROUP BY p.Name
+ORDER BY TotalVentas DESC;
