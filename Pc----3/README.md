@@ -8,13 +8,33 @@ Aquí se incluirán capturas, diagramas, avances visuales y cualquier recurso gr
 ## 📂 Contenido Visual
 
 A continuación, se muestran las imágenes subidas hasta el momento:
+Funciones Agregadas
+
 
 ![Imagen 1](imagen_1.png)
+
+%
+
 ![Imagen 2](imagen_2.png)
+
+%
+
 ![Imagen 3](imagen_3.png)
+
+%
+
 ![Imagen 4](imagen_4.png)
+
+%
+
 ![Imagen 5](imagen_5.png)
+
+%
+
 ![Imagen 6](imagen_6.png)
+
+%
+
 ![Imagen 7](imagen_7.png)
 
 
