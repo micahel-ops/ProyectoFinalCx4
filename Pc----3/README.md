@@ -15,6 +15,6 @@ A continuación, se muestran las imágenes subidas hasta el momento:
 ![Imagen 4](Imagen4.png)  
 ![Imagen 5](Imagen5.png)  
 ![Imagen 6](Imagen6.png)  
-![Imagen 7](Imagen7.png)
+![Imagen 7](Image7.png)
 
 ---
