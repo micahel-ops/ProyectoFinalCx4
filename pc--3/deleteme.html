@@ -1,1 +1,52 @@
-123
+
+
+Funciones Agregadas
+
+SUM(campo) → Calcula la suma total de los valores.
+SELECT SUM(campo) AS Total FROM tabla;
+
+COUNT(*) → Cuenta el número total de filas.
+SELECT COUNT(*) AS Cantidad FROM tabla;
+También puede contar solo valores no nulos:
+SELECT COUNT(campo) AS CantidadNoNula FROM tabla;
+
+AVG(campo) → Calcula el promedio.
+SELECT AVG(columna) AS Promedio FROM tabla;
+
+MAX(campo) → Devuelve el valor máximo.
+SELECT MAX(campo) AS Maximo FROM tabla;
+
+MIN(campo) → Devuelve el valor mínimo.
+SELECT MIN(campo) AS Minimo FROM tabla;
+
+
+Subconsultas y Funciones en SQL
+Tipos comunes:
+IN: Comprueba si un valor pertenece a un conjunto de valores devueltos por una subconsulta.
+EXISTS: Verifica si la subconsulta devuelve al menos una fila.
+
+Funciones de Fecha
+Se usan para manipular y obtener información de valores tipo fecha:
+DAY(fecha) devuelve el día del mes.
+MONTH(fecha) devuelve el mes.
+YEAR(fecha) devuelve el año.
+DATEADD(intervalo, cantidad, fecha) agrega tiempo a una fecha específica.
+DATEDIFF(intervalo, fechaInicio, fechaFin) calcula la diferencia entre dos fechas.
+GETDATE() obtiene la fecha y hora actual del sistema.
+
+Funciones de Cadena
+Perfectas para manipular texto y poner orden al caos:
+CONCAT(cadena1, cadena2...) concatena cadenas.
+LEN(cadena) devuelve la cantidad de caracteres.
+SUBSTRING(cadena, inicio, longitud) extrae una parte del texto.
+LOWER(cadena) convierte todo a minúsculas.
+UPPER(cadena) convierte todo a mayúsculas.
+LTRIM(cadena) quita espacios al inicio.
+RTRIM(cadena) quita espacios al final.
+Son las funciones que corrigen lo que los dedos chuecos del teclado arruinaron.
+
+Funciones de Conversión
+Ayudan a cambiar un dato de un tipo a otro:
+CAST(valor AS tipo) convierte un valor a un tipo específico.
+CONVERT(tipo, valor, estilo) similar a CAST pero con más formatos, especialmente para fechas.
+
