@@ -182,5 +182,30 @@ Comandos básicos:
 SHOW TABLES;
 USE sakila;
 
+Concepto General
+
+Las funciones agregadas permiten resumir información numérica o categórica de una tabla.
+En conjunto con GROUP BY y HAVING, se usan para analizar, comparar y filtrar datos agrupados.
+
+Funciones Agregadas
+
+SUM(columna) → Calcula la suma total de los valores.
+SELECT SUM(columna) AS Total FROM tabla;
+
+COUNT(*) → Cuenta el número total de filas.
+SELECT COUNT(*) AS Cantidad FROM tabla;
+También puede contar solo valores no nulos:
+SELECT COUNT(columna) AS CantidadNoNula FROM tabla;
+
+AVG(columna) → Calcula el promedio.
+SELECT AVG(columna) AS Promedio FROM tabla;
+
+MAX(columna) → Devuelve el valor máximo.
+SELECT MAX(columna) AS Maximo FROM tabla;
+
+MIN(columna) → Devuelve el valor mínimo.
+SELECT MIN(columna) AS Minimo FROM tabla;
+
+
 
 
